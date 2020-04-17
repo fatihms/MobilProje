@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/et_fileMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_round"
+        android:gravity="top"
+        android:hint="Mesaj"
+        android:padding="10dp"></EditText>
+
+    <EditText
+
+        android:id="@+id/et_fileName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/bg_round"
+        android:gravity="top"
+        android:hint="Dosya Adı"
+        android:padding="10dp"></EditText>
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_fileSave"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_round"
+        android:padding="10dp"
+        android:text="Kaydet/Güncelle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"></Button>
+
+    <Button
+
+        android:id="@+id/btn_fileRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_round"
+        android:padding="10dp"
+        android:text="Göster"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"></Button>
+
+
+    <Button
+
+        android:id="@+id/btn_fileDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_round"
+        android:padding="10dp"
+        android:text="Dosyayı Sil"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"></Button>
+
+</LinearLayout>
+
