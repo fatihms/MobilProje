@@ -1,5 +1,6 @@
 package com.example.mobilproje;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -9,22 +10,26 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import static android.hardware.Sensor.TYPE_ACCELEROMETER;
 import static android.hardware.Sensor.TYPE_LIGHT;
 
+
 public class Main7Activity extends AppCompatActivity implements SensorEventListener {
 
     SensorManager sensorManager;
     Sensor lightSensor, accelerometer;
     SensorEventListener lightEventListener;
+    Context context;
     View root;
     float maxValue;
     TextView tvX, tvY, tvZ;
 
     Boolean move = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class Main7Activity extends AppCompatActivity implements SensorEventListe
         lightSensor = sensorManager.getDefaultSensor(TYPE_LIGHT);
 
         maxValue = lightSensor.getMaximumRange();
+
+        context = getApplicationContext();
 
     }
 
@@ -79,6 +86,7 @@ public class Main7Activity extends AppCompatActivity implements SensorEventListe
                 @Override
                 public void run() {
                         if(event.values[0] > 0.0 || event.values[0] < 0.0 || event.values[1] < 9.81 || event.values[2] > 0.0 || event.values[2] < 0.0){
+                            Toast.makeText(context,"kapaniyor...",Toast.LENGTH_SHORT).show();
                             finish();
                             System.exit(0);
                         }
@@ -87,12 +95,11 @@ public class Main7Activity extends AppCompatActivity implements SensorEventListe
 
         }
 
-
-
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
+
 }
