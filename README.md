@@ -8,3 +8,8 @@ Yaptığım güncellemeler
 
 1- Yeni menüler
 
+2- Alarm oluşturma ve iptal etme
+
+3- Konum gösterme ve gönderme
+
+4- Rastgele sayılar üreterek yapay indirme işlemi
